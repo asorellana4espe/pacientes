@@ -39,7 +39,7 @@ class ChatSoporte extends StatelessWidget {
           context1,
           MaterialPageRoute(
               builder: (context) => Settings(
-               // documentDoctorID: documentDoctorID,
+                documentPacienteID: documentDoctorID,
               )));
     }
   }
@@ -103,88 +103,7 @@ class ChatSoporte extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
-            Row(
-              children: <Widget>[
-                Flexible(
-                    flex: 1,
-                    child: AspectRatio(
-                      aspectRatio: 2,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left: 35,right: 15),
-                        child: Card(
-                          clipBehavior: Clip.antiAlias,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          elevation: 5,
-                          child: InkWell(
-                            onTap: (){
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => PreguntasFrecuentes()));
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.all(2.0),
-                              child: Column(
-                                children: <Widget>[
-                                  Expanded(
-                                      child: AspectRatio(
-                                        aspectRatio: 1,
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(top:4.0),
-                                          child: SvgPicture.asset(
-                                              'assets/images/question.svg'),
-                                        ),
-                                      )),
-                                  Text("Preguntas Frecuentes",style:TextStyle(color: Color(0xFF064583),fontSize: 10,fontWeight: FontWeight.w700),textAlign: TextAlign.center,)
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    )),
-                Flexible(
-                    flex: 1,
-                    child: AspectRatio(
-                      aspectRatio: 2,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top:12.0,bottom: 12.0,left: 15,right: 35),
-                        child: Card(
-                          clipBehavior: Clip.antiAlias,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          elevation: 5,
-                          child: InkWell(
-                            onTap: (){
-                              Toast.show("Podrás Calificar la en Play Store Pronto......", context,
-                                  duration: Toast.LENGTH_SHORT, gravity: Toast.CENTER);
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.all(2.0),
-                              child: Column(
-                                children: <Widget>[
-                                  Expanded(
-                                      child: AspectRatio(
-                                        aspectRatio: 1,
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(4.0),
-                                          child: SvgPicture.asset(
-                                              'assets/images/feedback.svg'),
-                                        ),
-                                      )),
-                                  Text("Calificar App",style:TextStyle(color: Color(0xFF064583),fontSize: 10,fontWeight: FontWeight.w700))
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    )),
-              ],
-            ),
+            Container(),
             Expanded(
               child: ChatScreen(
                   peerId: documentPacienteID,
