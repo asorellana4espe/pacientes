@@ -46,6 +46,8 @@ dependencies:
 #  double_back_to_close_app: ^0.1.1
   firebase_auth:
   image_picker:
+  material_design_icons_flutter: ^4.0.5955
+  
   # cached_network_image:
 
 dev_dependencies:

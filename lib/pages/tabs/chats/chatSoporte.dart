@@ -724,18 +724,7 @@ class ChatScreenState extends State<ChatScreen> {
       child: Row(
         children: <Widget>[
           // Button send image
-          Material(
-            child: new Container(
-              margin: new EdgeInsets.symmetric(horizontal: 1.0),
-              child: new IconButton(
-                padding: const EdgeInsets.all(2.0),
-                icon: new Icon(Icons.image),
-                onPressed: getImage,
-                color: primaryColor,
-              ),
-            ),
-            color: Colors.white,
-          ),
+          
           Material(
             child: new Container(
               margin: new EdgeInsets.symmetric(horizontal: 1.0),

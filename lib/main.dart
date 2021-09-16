@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pacientes/pages/usuario/usuario.dart';
+import 'package:pacientes/pages/login/loginPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'ConectaMed',
+      title: 'SegMed Pacientes',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Usuario(usuarioUID: "IWki4E8eUabPqhrwxay32LBDkhW2",),
+      home: LoginPage(),
       //home:Auxiliar(),
     );
   }

@@ -203,16 +203,7 @@ class SettingsScreenState extends State<SettingsScreen> {
                                                   borderRadius: BorderRadius.all(
                                                       Radius.circular(150.0)),
                                                   clipBehavior: Clip.hardEdge,
-                                                ),
-                                                Padding(
-                                                  padding: const EdgeInsets.only(
-                                                      left: 150, top: 150),
-                                                  child: FloatingActionButton(
-                                                    backgroundColor: Color(0xFF064583),
-                                                    child: Icon(Icons.image, size: 30),
-                                                    onPressed: getImage,
-                                                  ),
-                                                ),
+                                                )
                                               ],
                                             ),
                                           ),
@@ -443,6 +434,61 @@ class SettingsScreenState extends State<SettingsScreen> {
                             width: 5,
                             height: 60,
                             color: Color(0xFF064583),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),),
+              ),
+              SizedBox(height: 15,),
+              Padding(
+                padding:
+                const EdgeInsets.only(left: 12.0, right: 12.0),
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  elevation: 5,
+                  child: InkWell(
+                    onTap: (){_logOut(context);},
+                    child: Row(
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(right: 40.0),
+                          child: Container(
+                            width: 5,
+                            height: 60,
+                            color: Color(0xFFC30606),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: SizedBox(
+                            width: 40,
+                            height: 40,
+                            child: AspectRatio(
+                              aspectRatio: 1,
+                              child: SvgPicture
+                                  .asset(
+                                  'assets/images/power.svg'),
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          child: ListTile(
+                            title: new Text(
+                              'Cerrar Sesión',textAlign: TextAlign.center,
+                              style: new TextStyle(fontWeight: FontWeight.bold,color: Color(0xFF064583),),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 40.0),
+                          child: Container(
+                            width: 5,
+                            height: 60,
+                            color: Color(0xFFC30606),
                           ),
                         ),
                       ],
